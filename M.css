@@ -1,0 +1,23 @@
+body {
+    /* background: url(135.jpg) no-repeat;
+    background-size: cover; */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+input[type="number"] {
+    width: 50px;
+    margin: 2px;
+    gap: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}

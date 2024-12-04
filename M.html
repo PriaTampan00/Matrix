@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="M.css">
+</head>
+<body>
+    <h1>Kalkulator Matriks</h1>
+    <label for="size">Pilih ukuran matriks:</label>
+    <select id="size" onchange="generateMatrixInputs()">
+        <option value="2">2x2</option>
+        <option value="3">3x3</option>
+        <option value="4">4x4</option>
+    </select>
+    <div id="matrices"></div>
+    <button onclick="calculateSum()">Hitung Penjumlahan</button>
+    <div id="result"></div>
+    <script src="M.js"></script>
+</body>
+</html>
