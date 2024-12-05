@@ -1,21 +1,24 @@
 function generateMatrixInputs() {
     const size = document.getElementById('size').value;
-    const matricesDiv = document.getElementById('matrices');
-    matricesDiv.innerHTML = '';
+    const matrix1Div = document.getElementById('matrix1');
+    const matrix2Div = document.getElementById('matrix2');
+    matrix1Div.innerHTML = '';
+    matrix2Div.innerHTML = '';
 
-    for (let k = 1; k <= 2; k++) {
-        const matrix = document.createElement('div');
-        matrix.className = 'matrix';
-        for (let i = 0; i < size; i++) {
-            for (let j = 0; j < size; j++) {
-                const input = document.createElement('input');
-                input.type = 'number';
-                input.id = `matrix${k}-${i}-${j}`;
-                matrix.appendChild(input);
-            }
-            matrix.appendChild(document.createElement('br'));
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            const input1 = document.createElement('input');
+            input1.type = 'number';
+            input1.id = `matrix1-${i}-${j}`;
+            matrix1Div.appendChild(input1);
+
+            const input2 = document.createElement('input');
+            input2.type = 'number';
+            input2.id = `matrix2-${i}-${j}`;
+            matrix2Div.appendChild(input2);
         }
-        matricesDiv.appendChild(matrix);
+        matrix1Div.appendChild(document.createElement('br'));
+        matrix2Div.appendChild(document.createElement('br'));
     }
 }
 
@@ -36,7 +39,7 @@ function calculateSum() {
 
     for (let i = 0; i < size; i++) {
         for (let j = 0; j < size; j++) {
-            resultDiv.innerHTML += resultMatrix[i][j] + ' ';
+            resultDiv.innerHTML += `<input type="number" value="${resultMatrix[i][j]}" disabled> `;
         }
         resultDiv.innerHTML += '<br>';
     }
