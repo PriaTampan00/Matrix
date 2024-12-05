@@ -14,9 +14,21 @@
         <option value="3">3x3</option>
         <option value="4">4x4</option>
     </select>
-    <div id="matrices"></div>
+    <div class="matrix-container">
+        <div id="matrixA" class="matrix-section">
+            <h2>Matriks A</h2>
+            <div id="matrix1"></div>
+        </div>
+        <div id="matrixB" class="matrix-section">
+            <h2>Matriks B</h2>
+            <div id="matrix2"></div>
+        </div>
+    </div>
     <button onclick="calculateSum()">Hitung Penjumlahan</button>
-    <div id="result"></div>
+    <div id="result-container">
+        <h2>Matriks C (Hasil)</h2>
+        <div id="result"></div>
+    </div>
     <script src="M.js"></script>
 </body>
 </html>
